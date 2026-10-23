@@ -39,13 +39,22 @@ tr.sale td{background:var(--ac2);font-weight:600}
 details{border-top:1px solid var(--bd);padding:10px 0;font-size:14px}details:first-of-type{border-top:0}
 summary{cursor:pointer;font-weight:600}details p{margin:8px 0 0;color:var(--mut)}
 .note.ok{color:var(--ok)}
+.tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.tabs button{background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:999px;padding:8px 16px;font-size:14px;cursor:pointer}
+.tabs button.on{background:var(--ac);color:#fff;border-color:var(--ac);font-weight:600}
+.gt td,.gt th{text-align:right}.gt td:first-child,.gt th:first-child{text-align:left;white-space:normal}
+.bst{font-weight:700;color:var(--ok)}
+.ptl{border-left:4px solid var(--warn)}
+.ptl b{color:var(--warn)}
 </style>
 </head>
 <body>
 <div class="w">
 <h1>Melhores dias e horários para disparos</h1>
-<div class="sub">Análise de 16 e-mails (fev–set). Escolha a métrica (engajamento ou vendas) para ver quais dias e horários performam melhor.</div>
+<div class="sub">Análise de 17 e-mails (fev–out). Escolha a métrica (engajamento ou vendas) para ver quais dias e horários performam melhor.</div>
 
+<div class="tabs"><button class="on" data-t="t1">⏰ Dia e horário</button><button data-t="t2">✍️ Conteúdo</button><button data-t="t3">💰 O que vende</button></div>
+<div id="t1">
 <div class="grid" id="kpis"></div>
 
 <div class="card">
@@ -77,30 +86,103 @@ summary{cursor:pointer;font-weight:600}details p{margin:8px 0 0;color:var(--mut)
 <div class="card"><h2>Resumo: o que os dados dizem</h2>
 <div class="ig">
 <div class="ic"><div class="e1">🏆</div><small>Melhor dia</small><b>Sexta</b><p>26,7% de abertura (a maior) e 2 das 3 vendas da base. Foram 3 envios.</p></div>
-<div class="ic"><div class="e1">👀</div><small>Melhor para ser aberto</small><b>Fim de tarde (17h–18h)</b><p>24,6% de abertura em média, na faixa com mais envios (7).</p></div>
-<div class="ic"><div class="e1">🖱️</div><small>Melhor para gerar clique</small><b>Início da tarde (13h–14h30)</b><p>0,99% de clique em média e o maior CTOR (4,5% dos que abrem clicam).</p></div>
-<div class="ic"><div class="e1">💰</div><small>Vendas</small><b>3 vendas em 16 envios</b><p>R$ 2.972,81 de receita. Todas entre 15h e 18h, em quinta e sexta.</p></div>
+<div class="ic"><div class="e1">👀</div><small>Melhor para ser aberto</small><b>Fim de tarde (17h–18h)</b><p>24,2% de abertura em média (8 envios), quase empatado com a manhã (24,1%).</p></div>
+<div class="ic"><div class="e1">🖱️</div><small>Melhor para gerar clique</small><b>Início da tarde (13h–14h30)</b><p>0,99% de clique em média (4 envios).</p></div>
+<div class="ic"><div class="e1">💰</div><small>Vendas</small><b>3 vendas em 17 envios</b><p>R$ 2.972,81 de receita. Todas entre 15h e 18h, em quinta e sexta. Veja a aba "O que vende".</p></div>
 </div></div>
 
 <div class="card"><h2>Como usar isso na prática</h2>
 <div class="ig">
-<div class="ic tip"><small>Quer vender? (oferta, coleção)</small><b>Sexta, 17h–18h</b><p>2 envios, 2 vendas (R$ 1.974,81) e a melhor abertura média (27,7%).</p></div>
+<div class="ic tip"><small>Quer vender? (oferta, coleção)</small><b>Sexta, 17h–18h</b><p>2 envios, 2 vendas (R$ 1.974,81) e 27,7% de abertura média.</p></div>
 <div class="ic tip"><small>Quer clique? (produto, lançamento)</small><b>13h–14h30</b><p>É a faixa com os cliques mais consistentes. Referência: Bikini Day, 16 cliques.</p></div>
-<div class="ic tip"><small>Quer ser visto? (avisos, novidades)</small><b>Fim de tarde ou 11h</b><p>Abrem bem (24,6% e 24,1%), mas o clique é mais baixo.</p></div>
+<div class="ic tip"><small>Quer ser visto? (avisos, novidades)</small><b>Fim de tarde ou 11h</b><p>Abrem bem (24,2% e 24,1%), mas o clique é mais baixo (0,70% e 0,59%).</p></div>
 </div>
 <div class="note ok">Próximo teste sugerido: repetir uma oferta na sexta, 17h–18h, e comparar com a mesma oferta em outro dia para confirmar se a sexta realmente converte mais.</div></div>
 
 <div class="card"><h2>Mais detalhes</h2>
-<details><summary>🔁 A mesma pauta rendeu muito diferente (Coleção Escapismo)</summary><p>Sexta 18h: 26,69% de abertura, 1,30% de clique e 1 venda. Quinta 14h: 26,78% e 0,65%. Quinta 17h: 21,69% e 0,31%. Quarta 17h: 22,76% e 0,13%. Com o mesmo tema, a sexta ganhou, o que reforça que dia e horário influenciam o resultado.</p></details>
-<details><summary>🏷️ Assunto com desconto funciona</summary><p>O "15% OFF Especial para você" (sexta 17h) teve a maior abertura da base (28,68%) e a maior receita (R$ 1.378,00), com apenas 5 cliques.</p></details>
-<details><summary>📉 Onde o desempenho é mais fraco</summary><p>Quinta às 17h (média de 0,42% de clique nos 2 envios) e quarta às 17h (0,13%). O meio da tarde (15h) também fica baixo: 21,7% de abertura e 0,54% de clique. A quinta tem a menor abertura entre os dias com mais envios (22,7%).</p></details>
-<details><summary>🔎 Cliques sem venda</summary><p>Bikini Day (16 cliques), Summer Exclusive (12) e Atelier Terre (9) não venderam. No geral, são 3 vendas em 115 cliques (2,6%), o que sugere que parte do gargalo está depois do clique (página, oferta, preço).</p></details>
-<details><summary>💸 Números de venda</summary><p>Receita média de R$ 185,80 por e-mail enviado e ticket médio de cerca de R$ 991 (R$ 998, R$ 596 e R$ 1.378). A quinta teve 1 venda, a sexta 2, e os demais dias nenhuma.</p></details>
-<details><summary>📝 Tema também pesa</summary><p>ECO e Vestígios abrem bem, mas clicam pouco (0,23% a 0,52%). Prisme, Atelier Terre, Summer e Bikini Day ficam entre 0,84% e 1,31%.</p></details>
+<details><summary>📉 Onde o desempenho é mais fraco</summary><p>Terça tem a menor abertura e o menor clique entre os dias (22,4% e 0,56%, em 3 envios). O Eterno Fugaz às 18h de terça abriu 21,4%, então o bom resultado das 18h veio de quarta e sexta, e não de terça. Quinta às 17h também fica baixo (0,42% de clique em 2 envios), assim como o meio da tarde (15h: 21,7% de abertura e 0,54% de clique).</p></details>
+<details><summary>🔎 Cliques sem venda</summary><p>Bikini Day (16 cliques), Summer Exclusive (12) e Atelier Terre (9) não venderam. No geral, são 3 vendas em 120 cliques (2,5%), o que sugere que parte do gargalo está depois do clique (página, oferta, preço).</p></details>
+<details><summary>💸 Números de venda</summary><p>Receita média de R$ 174,87 por e-mail enviado e ticket médio de cerca de R$ 991 (R$ 998, R$ 597 e R$ 1.378). A quinta teve 1 venda, a sexta 2, e os demais dias nenhuma.</p></details>
+<details><summary>📝 Tema também pesa</summary><p>Vestígios, ECO e Eterno Fugaz clicam pouco (0,23% a 0,52%). Prisme, Atelier Terre, Summer e Bikini Day ficam entre 0,84% e 1,31%.</p></details>
 </div>
-<div class="note" style="margin:-6px 0 14px">⚠ Amostra pequena (1 a 7 envios por grupo), com 3 vendas no total: trate como tendência, não como regra.</div>
-
+<div class="note" style="margin:-6px 0 14px">⚠ Amostra pequena (1 a 8 envios por grupo), com 3 vendas no total: trate como tendência, não como regra.</div>
 <div class="card"><h2>Dados completos (clique no cabeçalho para ordenar)</h2><div class="tw"><table id="tb"></table></div></div>
+</div>
+<div id="t2" hidden>
+<div class="card"><h2>Resumo: o que o conteúdo diz sobre os resultados</h2>
+<div class="ig">
+<div class="ic"><div class="e1">✂️</div><small>Texto do e-mail</small><b>Texto longo clica pouco</b><p>0,38% de clique nos 6 e-mails longos, contra 0,89% nos médios e 0,98% nos curtos. A abertura é parecida (cerca de 24%).</p></div>
+<div class="ic"><div class="e1">🔤</div><small>Assunto</small><b>Assunto curto abre mais</b><p>25,1% de abertura com até 32 caracteres (8 envios), contra 22,4% com 33 a 55 caracteres (8 envios).</p></div>
+<div class="ic"><div class="e1">🎟️</div><small>Oferta</small><b>Cupom com prazo vendeu</b><p>O "15% OFF" (cupom com datas, enviado dentro do prazo) teve a maior abertura (28,68%) e a maior receita (R$ 1.378,00).</p></div>
+<div class="ic"><div class="e1">🛒</div><small>Link de destino</small><b>Catálogo geral converteu</b><p>2 dos 4 envios que levam ao /shop/ venderam (R$ 1.974,81), contra 1 venda nos outros 13. Os dois foram na sexta.</p></div>
+</div></div>
+
+<div class="card"><h2>Como usar isso na prática</h2>
+<div class="ig">
+<div class="ic tip"><small>Quer clique?</small><b>Texto curto e direto</b><p>Coleção Escapismo: a versão curta teve 1,30% de clique; as 3 versões longas ficaram entre 0,13% e 0,65%.</p></div>
+<div class="ic tip"><small>Quer abertura?</small><b>Assunto curto</b><p>Até uns 30 caracteres, em formato de etiqueta ("NEW IN | NOME") ou de curiosidade ("Di Croce ✨").</p></div>
+<div class="ic tip"><small>Quer vender?</small><b>Cupom, prazo e catálogo</b><p>Oferta com cupom e datas claras, enviada dentro da validade, com link para o catálogo.</p></div>
+</div>
+<div class="note ok">Próximo teste sugerido: mandar a mesma pauta em duas versões (texto curto x longo, ou dois assuntos) no mesmo dia e horário, para separar o efeito do conteúdo do efeito de dia e horário.</div></div>
+
+<div class="card"><h2>Compare por característica do e-mail</h2>
+<label for="gsel" style="font-size:13px;color:var(--mut)">Agrupar por: </label>
+<select id="gsel"></select>
+<div id="gdesc" style="font-size:12px;color:var(--mut);margin:8px 0"></div>
+<div class="tw"><table class="gt" id="gtb" style="min-width:520px"></table></div>
+<div style="font-size:12px;color:var(--mut);margin-top:8px">Em verde, o melhor valor de cada coluna. Abertura e clique são médias por envio; vendas e receita são totais.</div></div>
+
+<div class="card"><h2>Mais detalhes</h2>
+<details><summary>🔁 Coleção Escapismo: 4 versões da mesma pauta</summary><p>12/03 (assunto "Olá {{ first_name }}, tudo bem?", texto longo): 21,69% de abertura e 0,31% de clique. 25/03 (assunto "NEW IN | ESCAPISMO", texto longo): 22,76% e 0,13%. 02/04 ("DROP 2 | ESCAPISMO", texto longo): 26,78% e 0,65%. 10/04 ("NEW IN | COLEÇÃO ESCAPISMO", só título e botão): 26,69%, 1,30% e 1 venda. Trocar a saudação genérica por um assunto com a coleção acompanhou o aumento da abertura, e cortar o texto acompanhou o aumento do clique. Atenção: o dia e o horário também mudaram entre eles.</p></details>
+<details><summary>🔎 Bikini Day: muito clique, nenhuma venda</summary><p>O e-mail foi enviado em 01/07, dentro da oferta (1 a 5 de julho), e teve 16 cliques, o maior volume da base, sem nenhuma venda. A oferta era escalonada (1 peça 30%, 2 peças 40%, 3 peças 50%), então o "até 50%" exigia levar 3 peças. Vale olhar a página de destino e o comportamento de compra depois do clique.</p></details>
+<details><summary>🎟️ Cupom e parcelamento no rodapé</summary><p>Os e-mails de fevereiro a abril (Summer sale, Escapismo e 15% OFF) trazem cupom de 1ª compra, parcelamento e frete grátis. De maio em diante, o rodapé deixou de ter cupom. Com cupom: 2 vendas em 6 envios. Sem cupom: 1 venda em 11. Pode ser efeito de época e de pauta, e não só do cupom.</p></details>
+<details><summary>📖 Textos poéticos (Vestígios e ECO)</summary><p>Abrem bem (23,7% e 24,9%), mas clicam pouco (0,35% e 0,44%) e não venderam. Os dois e-mails com parceiras (Carol Toledo em Vestígios #2 e Nicole Feuser em ECO #2) também ficaram abaixo de 0,5% de clique. O Eterno Fugaz #1 (texto longo, terça 18h) seguiu o padrão: 21,4% de abertura e 0,36% de clique.</p></details>
+<details><summary>🧩 Prisme e Atelier Terre: vários motivos para clicar</summary><p>Clicam cerca de 1,0%. Os e-mails apresentam blocos por categoria ou material (Blue Euro Summer, Black &amp; White, linho, ráfia, cetim), o que dá mais de um ponto de entrada para o clique.</p></details>
+<details><summary>💸 Promoção x lançamento</summary><p>Abrem igual (23,9% e 23,6%), mas as promoções clicam mais (1,00% contra 0,67%). Mesmo com desconto no assunto, Summer sale e Bikini Day abriram abaixo da média (21,2% e 21,7%).</p></details>
+<details><summary>📌 Pré-header</summary><p>Não aparece vantagem: os 9 e-mails com pré-header abriram 23,2% em média e os 8 sem pré-header, 24,1%. Boa parte dos pré-headers repete a ideia do assunto. Vale testar usá-lo para complementar (por exemplo, com oferta ou prazo).</p></details>
+</div>
+
+<div class="note" style="margin:0 0 14px">⚠ Amostra pequena (de 1 a 10 envios por grupo e 3 vendas) e cada e-mail mistura várias variáveis (dia, horário, tema, texto e oferta): trate como indício, não como regra. O tamanho do texto é uma estimativa por contagem aproximada de palavras (curto até ~60, médio ~60 a 130, longo acima de ~130); o do assunto é por número de caracteres.</div>
+
+<div class="card"><h2>Conteúdo de cada disparo</h2><div class="tw"><table id="ctb" style="min-width:860px"></table></div></div>
+</div>
+<div id="t3" hidden>
+<div class="card"><h2>O que os e-mails que venderam têm em comum</h2>
+<div class="ig">
+<div class="ic"><div class="e1">📅</div><small>Dia</small><b>Quinta ou sexta</b><p>3 dos 8 envios nesses dias venderam. Nos outros dias, 0 de 9.</p></div>
+<div class="ic"><div class="e1">🕒</div><small>Horário</small><b>Das 15h às 18h</b><p>3 dos 10 envios nessa janela venderam. Antes das 15h, 0 de 7.</p></div>
+<div class="ic"><div class="e1">✂️</div><small>Texto</small><b>Curto ou médio</b><p>Os 3 que venderam têm texto curto ou médio. Os 6 e-mails longos não venderam.</p></div>
+<div class="ic"><div class="e1">🔢</div><small>Cliques</small><b>Mais cliques não é mais venda</b><p>Média de 7,3 cliques por envio nos que venderam e 7,0 nos que não venderam.</p></div>
+</div></div>
+
+<div class="card"><h2>O perfil que concentrou as vendas</h2>
+<p style="margin:0 0 10px;font-size:14px">Quinta ou sexta + 15h–18h + texto curto ou médio: <b>4 envios, 3 vendas</b>. Fora desse perfil: <b>13 envios, 0 vendas</b>.</p>
+<div class="tw"><table class="gt" id="ptb" style="min-width:520px"></table></div>
+<p style="margin:10px 0 0;font-size:13px;color:var(--mut)">O único do perfil que não vendeu foi o News ECO (03/09): texto narrativo, sem cupom nem oferta e com link para a página do drop.</p></div>
+
+<div class="card"><h2>Comparativo: com venda x sem venda</h2>
+<div class="tw"><table class="gt" id="vtb" style="min-width:520px"></table></div>
+<div style="font-size:12px;color:var(--mut);margin-top:8px">Em verde, as diferenças acima de 40 pontos percentuais entre os dois grupos.</div></div>
+
+<div class="card"><h2>O que mais aparece nos e-mails que venderam</h2>
+<details><summary>🎟️ Oferta ou benefício claro</summary><p>Dois dos três trazem cupom (15% OFF com datas e 10% na 1ª compra). O terceiro (Prisme #2) destaca uma peça com benefícios concretos (saias midi e mini, design vazado para a praia, cobertura para o resort), com ticket de R$ 998. Os e-mails narrativos (Vestígios, ECO e Eterno Fugaz) apresentam a coleção pelo conceito, sem oferta nem benefício do produto.</p></details>
+<details><summary>🛒 Caminho curto até a compra</summary><p>Dois dos três levam direto ao catálogo (/shop/), com um botão principal e pouco texto ("SHOP NOW").</p></details>
+<details><summary>⏳ Prazo ajuda, mas não basta</summary><p>O 15% OFF tinha datas (12 a 15/03) e foi enviado dentro do prazo. O Bikini Day (1 a 5/07) também tinha prazo e não vendeu: a oferta escalonada só chegava a 50% com 3 peças.</p></details>
+<details><summary>🔤 Venda não depende só de abertura</summary><p>O Prisme #2 teve a menor abertura da base (20,70%, assunto de 61 caracteres) e mesmo assim vendeu. Os que venderam abriram 25,4% em média, contra 23,2% dos demais, uma diferença pequena perto da diferença no clique (0,97% contra 0,68%).</p></details>
+<details><summary>📉 Desde junho, nenhuma venda</summary><p>As 3 vendas foram até 21/05. Nos 9 envios desde junho, nenhuma. Vale confirmar se as peças de Vestígios, ECO e Eterno Fugaz (apresentadas como Verão 2027) já estavam disponíveis para compra, porque isso muda a leitura do conteúdo. Pode haver também efeito de época e do fim dos cupons.</p></details>
+</div>
+
+<div class="card"><h2>Receita para o próximo e-mail de vendas</h2>
+<div class="ig">
+<div class="ic tip"><small>Quando</small><b>Quinta ou sexta, 17h–18h</b><p>Sexta tem o melhor histórico (2 envios, 2 vendas).</p></div>
+<div class="ic tip"><small>Texto</small><b>Curto e direto</b><p>Título, 1 ou 2 frases e 1 botão principal. Evite texto longo e poético.</p></div>
+<div class="ic tip"><small>Oferta</small><b>Cupom com prazo ou peça com benefício</b><p>Datas claras, enviado dentro da validade, e a oferta visível sem precisar rolar.</p></div>
+<div class="ic tip"><small>Link e assunto</small><b>Catálogo e assunto curto</b><p>Botão para o catálogo ou a página da peça, e assunto de até uns 30 caracteres.</p></div>
+</div>
+<div class="note ok">Sugestão de teste: um Eterno Fugaz #2 nesse formato (sexta ou quinta, 17h–18h, texto curto, cupom com prazo e botão para o catálogo). O #1 (terça 18h, texto longo, sem oferta) ficou fora do perfil: 21,4% de abertura e 0,36% de clique.</div></div>
+
+<div class="note" style="margin:0 0 14px">⚠ Foram só 3 vendas, e os critérios acima foram definidos olhando os próprios dados. Trate o perfil como hipótese para testar, não como regra. Dia, horário, tema, texto e oferta mudam juntos de um e-mail para o outro, então não dá para separar o efeito de cada um.</div>
+</div>
 </div>
 
 <script>
@@ -116,13 +198,14 @@ const D=[
 ["21/05","News Prisme #2","Quinta","15h",20.70,172,0.84,7,1,998,0.12,998],
 ["18/06","ATELIER TERRE #2","Quinta","13h",20.29,197,0.93,9,0,0,0,0],
 ["28/08","Vestígios #2","Sexta","11h",24.64,324,0.46,6,0,0,0,0],
-["07/07","News Bikini Day","Quarta","14h30",21.73,266,1.31,16,0,0,0,0],
+["01/07","News Bikini Day","Quarta","14h30",21.73,266,1.31,16,0,0,0,0],
 ["02/04","Coleção Escapismo","Quinta","14h",26.78,207,0.65,5,0,0,0,0],
 ["10/04","Coleção Escapismo","Sexta","18h",26.69,205,1.30,10,1,596.81,0.13,596.81],
 ["12/03","Coleção Escapismo","Quinta","17h",21.69,141,0.31,2,0,0,0,0],
 ["13/03","15% OFF Especial para você","Sexta","17h",28.68,185,0.78,5,1,1378,0.16,1378],
 ["25/03","Coleção Escapismo","Quarta","17h",22.76,173,0.13,1,0,0,0,0],
-["23/02","Summer salle","Segunda","17h",21.15,162,0.91,7,0,0,0,0]
+["23/02","Summer salle","Segunda","17h",21.15,162,0.91,7,0,0,0,0],
+["20/10","Eterno Fugaz #1","Terça","18h",21.37,297,0.36,5,0,0,0,0]
 ].map(r=>{
   const hn=parseInt(r[3])+(r[3].toLowerCase().split("h")[1]?0.5:0);
   return{data:r[0],tema:r[1],dia:r[2],hor:r[3],ab:r[4],n_ab:r[5],cl:r[6],n_cl:r[7],v:r[8],rec:r[9],conv:r[10],tk:r[11],
@@ -172,6 +255,82 @@ function table(){
   document.querySelectorAll("th").forEach(t=>t.onclick=()=>{const k=t.dataset.k;asc=(k==sk)?!asc:false;sk=k;table()});
 }
 table();
+
+// ===== Aba Conteúdo =====
+// assunto, pré-header (1/0), texto, cupom no rodapé (1/0), tipo, link de destino, pauta
+const CT={
+"23/02":["Seleção Especial Até 50% Off!",0,"Curto",1,"Promoção","Outras (bazar, new-in, bikini-day)","Promoções"],
+"12/03":["Olá {{ first_name }}, tudo bem?",0,"Longo",1,"Lançamento","Outras (bazar, new-in, bikini-day)","Escapismo"],
+"13/03":["Di Croce  ✨",0,"Curto",1,"Promoção","Catálogo geral (/shop/)","Promoções"],
+"25/03":["NEW IN | ESCAPISMO",0,"Longo",1,"Lançamento","Catálogo geral (/shop/)","Escapismo"],
+"02/04":["DROP 2 | ESCAPISMO",0,"Longo",1,"Lançamento","Catálogo geral (/shop/)","Escapismo"],
+"10/04":["NEW IN | COLEÇÃO ESCAPISMO",0,"Curto",1,"Lançamento","Catálogo geral (/shop/)","Escapismo"],
+"13/05":["PRISME | Novo drop Di Croce",1,"Médio",0,"Lançamento","Página da coleção/drop","Prisme"],
+"21/05":["PRISME NO EURO SUMMER | Formas que esculpem a mulher Di Croce",1,"Médio",0,"Lançamento","Página da coleção/drop","Prisme"],
+"02/06":["[NEW IN] ATELIER TERRE | Di Croce",1,"Médio",0,"Lançamento","Página da coleção/drop","Atelier Terre"],
+"18/06":["ATELIER TERRE | O artesanal em sua forma mais pura",1,"Médio",0,"Lançamento","Página da coleção/drop","Atelier Terre"],
+"01/07":["Bikini Day: até 50% OFF em beachwear",1,"Médio",0,"Promoção","Outras (bazar, new-in, bikini-day)","Promoções"],
+"22/07":["O luxo do respiro: A atemporalidade do linho Di Croce",1,"Curto",0,"Lançamento","Página da coleção/drop","Summer Exclusive"],
+"18/08":["VESTÍGIOS: O olhar exclusivo do seu próximo verão",1,"Médio",0,"Lançamento","Página da coleção/drop","Vestígios"],
+"28/08":["A matéria do tempo: conheça Vestígios",1,"Longo",0,"Lançamento","Página da coleção/drop","Vestígios"],
+"03/09":["O que reverbera em você? Descubra o Drop ECO",0,"Médio",0,"Lançamento","Página da coleção/drop","ECO"],
+"30/09":["Vista a sua própria metamorfose",1,"Longo",0,"Lançamento","Página da coleção/drop","ECO"],
+"20/10":["Eterno Fugaz: Não deixe a sensação escapar",0,"Longo",0,"Lançamento","Página da coleção/drop","Eterno Fugaz"]};
+const TX={Curto:"Curto (até ~60 palavras)",Médio:"Médio (~60 a 130)",Longo:"Longo (acima de ~130)"};
+D.forEach(r=>{const c=CT[r.data];r.as=c[0].trim();r.pre=c[1];r.txt=TX[c[2]];r.cup=c[3];r.tipo=c[4];r.lnk=c[5];r.fam=c[6];r.nas=r.as.length;
+ r.cas=r.nas<=32?"Curto (até 32 caracteres)":r.nas<=55?"Médio (33 a 55)":"Longo (56 ou mais)";});
+const G={
+ tipo:["Tipo de e-mail",r=>r.tipo,"Promoção = desconto é o protagonista (Summer sale, 15% OFF, Bikini Day). Lançamento = coleção ou drop."],
+ txt:["Tamanho do texto",r=>r.txt,"Estimativa do tamanho do texto do corpo do e-mail."],
+ cas:["Tamanho do assunto",r=>r.cas,"Número de caracteres do assunto."],
+ pre:["Pré-header",r=>r.pre?"Com pré-header":"Sem pré-header","O pré-header é a frase que aparece depois do assunto na caixa de entrada."],
+ cup:["Cupom no rodapé",r=>r.cup?"Com cupom e parcelamento":"Sem cupom no rodapé","Rodapé com cupom de 1ª compra, parcelamento e frete grátis."],
+ lnk:["Link de destino",r=>r.lnk,"Para onde o botão principal leva."],
+ fam:["Pauta / coleção",r=>r.fam,"Agrupa os envios da mesma coleção ou campanha."]};
+const gs=document.getElementById("gsel");
+gs.innerHTML=Object.keys(G).map(k=>`<option value="${k}">${G[k][0]}</option>`).join("");
+function gtable(){
+  const k=gs.value,g=G[k];document.getElementById("gdesc").textContent=g[2];
+  const m={};D.forEach(r=>{(m[g[1](r)]=m[g[1](r)]||[]).push(r)});
+  const rows=Object.keys(m).map(n=>{const s=m[n];return{n,c:s.length,ab:avg(s.map(r=>r.ab)),cl:avg(s.map(r=>r.cl)),v:sum(s.map(r=>r.v)),rec:sum(s.map(r=>r.rec))}}).sort((a,b)=>b.cl-a.cl);
+  const mx=f=>Math.max(...rows.map(r=>r[f]));
+  const b=(f,r,t)=>`<td class="${rows.length>1&&r[f]===mx(f)&&mx(f)>0?"bst":""}">${t}</td>`;
+  document.getElementById("gtb").innerHTML="<tr><th>Grupo</th><th>Envios</th><th>Abertura</th><th>Clique</th><th>Vendas</th><th>Receita</th></tr>"+
+   rows.map(r=>`<tr><td>${r.n}</td><td>${r.c}</td>${b("ab",r,pct(r.ab))}${b("cl",r,pct(r.cl))}<td>${r.v} de ${r.c}</td>${b("rec",r,r.rec?brl(r.rec):"—")}</tr>`).join("");
+}
+gs.onchange=gtable;gtable();
+document.getElementById("ctb").innerHTML="<tr><th>Data</th><th>Assunto</th><th>Car.</th><th>Pré-header</th><th>Texto</th><th>Cupom</th><th>Link</th><th>Abertura</th><th>Clique</th><th>Vendas</th></tr>"+
+ [...D].sort((a,b)=>a.data.split("/").reverse().join("")>b.data.split("/").reverse().join("")?1:-1).map(r=>`<tr class="${r.v?"sale":""}"><td>${r.data}</td><td style="white-space:normal;min-width:220px">${r.as}</td><td>${r.nas}</td><td>${r.pre?"sim":"não"}</td><td>${r.txt.split(" ")[0]}</td><td>${r.cup?"sim":"não"}</td><td>${r.lnk.split(" (")[0]}</td><td>${pct(r.ab)}</td><td>${pct(r.cl)}</td><td>${r.v}</td></tr>`).join("");
+// Abas
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll(".tabs button").forEach(x=>x.classList.toggle("on",x===b));
+  ["t1","t2","t3"].forEach(id=>document.getElementById(id).hidden=(id!==b.dataset.t));
+});
+
+// ===== Aba O que vende =====
+const hn=r=>parseInt(r.hor)+(r.hor.toLowerCase().split("h")[1]?0.5:0);
+const FT=[
+ ["Enviado na quinta ou sexta",r=>r.dia==="Quinta"||r.dia==="Sexta"],
+ ["Enviado entre 15h e 18h",r=>hn(r)>=15&&hn(r)<=18],
+ ["Enviado antes das 15h",r=>hn(r)<15],
+ ["Texto curto ou médio",r=>!r.txt.startsWith("Longo")],
+ ["Texto longo",r=>r.txt.startsWith("Longo")],
+ ["Cupom e parcelamento no rodapé",r=>r.cup],
+ ["Botão leva ao catálogo (/shop/)",r=>r.lnk.startsWith("Catálogo")],
+ ["Assunto curto (até 32 caracteres)",r=>r.nas<=32],
+ ["Com pré-header",r=>r.pre]
+];
+const SV=D.filter(r=>r.v>0), NV=D.filter(r=>r.v===0);
+const pc=(a,f)=>Math.round(a.filter(f).length/a.length*100);
+document.getElementById("vtb").innerHTML=`<tr><th>Característica</th><th>Com venda (${SV.length})</th><th>Sem venda (${NV.length})</th></tr>`+
+ FT.map(x=>{const a=SV.filter(x[1]).length,b=NV.filter(x[1]).length,d=Math.abs(pc(SV,x[1])-pc(NV,x[1]));
+  return `<tr><td>${x[0]}</td><td class="${d>=40?"bst":""}">${a} de ${SV.length} (${pc(SV,x[1])}%)</td><td>${b} de ${NV.length} (${pc(NV,x[1])}%)</td></tr>`}).join("")+
+ `<tr><td>Abertura média</td><td>${pct(avg(SV.map(r=>r.ab)))}</td><td>${pct(avg(NV.map(r=>r.ab)))}</td></tr>
+  <tr><td>Clique médio</td><td>${pct(avg(SV.map(r=>r.cl)))}</td><td>${pct(avg(NV.map(r=>r.cl)))}</td></tr>
+  <tr><td>Cliques por envio</td><td>${avg(SV.map(r=>r.n_cl)).toFixed(1).replace(".",",")}</td><td>${avg(NV.map(r=>r.n_cl)).toFixed(1).replace(".",",")}</td></tr>`;
+const PF=r=>FT[0][1](r)&&FT[1][1](r)&&FT[3][1](r);
+document.getElementById("ptb").innerHTML="<tr><th>Disparo</th><th>Dia e horário</th><th>Texto</th><th>Clique</th><th>Vendas</th></tr>"+
+ D.filter(PF).map(r=>`<tr class="${r.v?"sale":""}"><td>${r.data} · ${r.tema}</td><td>${r.dia}, ${r.hor}</td><td>${r.txt.split(" ")[0]}</td><td>${pct(r.cl)}</td><td>${r.v?brl(r.rec):"0"}</td></tr>`).join("");
 </script>
 </div>
 </body>
